@@ -1,0 +1,81 @@
+name: btc_dca_reminder
+description: 🌈 BTC DCA Reminder App - A smart dollar-cost averaging assistant, developed with Flutter, helping users make intelligent investments based on the Bitcoin Rainbow Chart theory.
+
+# Prevent publishing to pub.dev
+publish_to: 'none'
+
+# Application version and build number
+version: 1.0.0+1
+
+environment:
+  # Flutter SDK version requirement
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  # Flutter SDK core library
+  flutter:
+    sdk: flutter
+
+  # UI related dependencies
+  cupertino_icons: ^1.0.2 # iOS style icons
+  google_fonts: ^6.1.0    # Integrate Google Fonts for beautiful typography
+
+  # HTTP requests
+  dio: ^5.3.0             # Powerful HTTP client for API interaction
+
+  # State management
+  provider: ^6.1.0        # Flutter's recommended state management solution
+
+  # Local storage
+  shared_preferences: ^2.2.0 # Lightweight key-value storage for caching data and user settings
+
+  # Notifications and background tasks
+  flutter_local_notifications: ^19.3.0 # Cross-platform local notification plugin
+  workmanager: ^0.5.2 # (Android only) Used for executing periodic tasks in the background, ensuring reminder reliability
+
+  # Desktop integration
+  tray_manager: ^0.2.3    # Implements system tray functionality for desktop
+  window_manager: ^0.4.2  # Manages desktop application window behavior
+
+  # Scheduled tasks
+  cron: ^0.6.0            # For scheduling periodic tasks, such as data refresh and notifications
+
+  # Mathematical computations
+  ml_linalg: ^13.12.6     # Provides linear algebra capabilities for Rainbow DCA algorithm calculations
+
+  # Chart display
+  fl_chart: ^1.0.0        # Powerful Flutter charting library for drawing Kline charts
+
+  # Date and time handling
+  intl: ^0.18.0           # Internationalization and localization support, including date formatting
+  timezone: ^0.10.1       # Timezone handling
+
+dev_dependencies:
+  # Flutter testing library
+  flutter_test:
+    sdk: flutter
+  # Flutter code linting
+  flutter_lints: ^3.0.0
+
+# Flutter specific configuration
+flutter:
+  # Enable Material Design
+  uses-material-design: true
+
+  # Asset files (images, etc.)
+  assets:
+    - assets/ # Contains app images and other resources
+    - windows/runner/resources/app_icon.ico # Windows application icon
+
+  # Font configuration (configure custom fonts here if needed)
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
